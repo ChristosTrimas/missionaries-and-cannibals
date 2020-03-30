@@ -13,7 +13,6 @@ class State():
 		self.boat = boat
 		self.rightCan = rightCan
 		self.rightMis = rightMis
-		self.expanded = 0
 		self.parent = None
 
  	def is_goal(self):
@@ -112,7 +111,7 @@ def BFS():
 	queue.append(init_state)
 
 	while queue:
-		init_state.expanded += 1
+		
 		state = queue.pop(0)
 		if state.is_goal():
 			return state
@@ -132,14 +131,11 @@ def print_path(solution):
 		path.append(parent)
 		parent = parent.parent
 
-	tmp = 0
 	for i in range(len(path)):
-		state = path[len(path)-i-1]
-		state.expanded += tmp
-		tmp = state.expanded
+		state = path[len(path)-i-1] 
 		print((state.leftCan),(state.leftMis),state.boat,(state.rightCan),(state.rightMis))
 	
-	print("Expanded: ", (state.expanded))
+	print("Steps: ", len(path))
 
 if __name__ == "__main__":
 	print("Solution to the Cannibals and Missionaries problem")
