@@ -15,6 +15,6 @@ $python misscan.py
 
 The outcome is the following:
 
-[Alt text](/images/execution.png)
+(/images/execution.png)
 
 
