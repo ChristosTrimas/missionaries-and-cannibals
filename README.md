@@ -8,3 +8,5 @@ $python python
 
 If yes run the command;
 $python misscan.py
+
+![Alt text](/images/execution.png)
